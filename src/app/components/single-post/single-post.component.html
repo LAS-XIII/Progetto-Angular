@@ -1,0 +1,35 @@
+<div *ngIf="thereAreAnyPosts; else elseBlock" class="container">
+  <div class="post-card" *ngFor="let post of posts">
+    <div class="headers">
+      <h3 class="title">{{ post.title }}</h3>
+      <p class="subtitle">Id: {{ post.user_id }}</p>
+    </div>
+    <div class="body">
+      <p class="message">
+        {{ post.body }}
+      </p>
+    </div>
+    <div>
+      <mat-accordion class="expandable">
+        <mat-expansion-panel
+          class="comments"
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title class="comment-preview">
+              Comments
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-comments [idPost]="post.id"></app-comments>
+          <app-add-com [idPost]="post.id"></app-add-com>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</div>
+<ng-template #elseBlock class="else-block">
+  <div class="error-card">
+    <p>Non sono stati trovati dei post</p>
+  </div>
+</ng-template>

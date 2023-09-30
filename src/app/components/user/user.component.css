@@ -1,0 +1,101 @@
+/* PAGE */
+
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/* HEADER */
+
+.hero {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 3rem;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* BODY */
+
+.body {
+    min-height: 90vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.table{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem auto;
+}
+
+.app-table {
+    width: 90%;
+    margin: auto;
+}
+
+.add-btn {
+    margin: 2rem;
+    width: 80%;
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid green;
+    border-radius: 5px;
+    color: green;
+    font-size: large;
+    font-weight: 900;
+    box-shadow: 0px 2px 5px 0px #444;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    cursor: pointer;
+    background-color: green;
+    border-color: green;
+    color: white;
+    box-shadow: 0px 0px 5px 0px black;
+}
+
+.add-user{
+    height: 100%;
+    width: 50px;
+    border-left: 1px solid #bbb;
+    background-color: #ddd;
+}
+
+
+
+/* Media */
+
+@media screen and (max-width: 1200px) {
+    .table {
+        width: 95%;
+    }
+    .add-user {
+        width: 5%;
+    }    
+}

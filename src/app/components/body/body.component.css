@@ -1,0 +1,20 @@
+.body {
+    width: calc(100% - 5rem);
+    height: 100vh;
+    margin-left: 5rem;
+    z-index: 0;
+    position: relative;
+    top: 0;
+    transition: all 0.3s ease;
+    background: #b7d8ee;
+}
+
+.body-trimmed {
+    width: calc(100% - 14.525rem);
+    margin-left: 14.525rem;
+}
+
+.body-md-screen {
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+}

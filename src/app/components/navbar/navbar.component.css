@@ -1,0 +1,127 @@
+a {
+    text-decoration: none;
+}
+
+
+/* MENU-BUTTON */
+
+.sidenav {
+    background: #242627;;
+    transition: all 0.3s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-logo {
+    display: flex;
+    align-items: center;
+    padding: 0.938rem 0.938rem 0 0.938rem;
+    width: 100%;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #242627;;
+    color: #fff;
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 0.313rem;
+    padding: 0.313rem;
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+    border: none;
+}
+.close {
+    transition: all .5s ease;
+}
+.close:hover {
+    background-color: #303a3d;
+    color: #ccc;
+    border-radius: 0.625rem
+}
+
+
+
+
+/* SIDEBAR AND ELEMENTS */
+
+.sidenav-collapsed {
+    width: 14.525rem;
+}
+
+.sidenav-nav {
+    list-style: none;
+    padding: 0.938rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100%- 3.65rem);
+    cursor: pointer;
+}
+
+.sidenav-nav-item {
+    width: 100%;
+    margin-bottom: 0.625rem;
+}
+
+.sidenav-nav-link {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    border-radius: 0.625rem;
+    color: #f3f3f3;
+    transition: all .3s ease;
+}
+.sidenav-nav-link:hover {
+    background-color: #b7d8ee;
+    color: #222425;
+}
+
+.sidenav-nav-icon {
+    font-size: 22px;
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 0.55rem;
+    text-align: center;
+}
+
+.sidenav-link-text {
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+
+/* LOGIN BUTTON */
+
+.login {
+    margin-bottom: 0.625rem;
+    background-color: #242627;;
+}
+.login-logo {    
+    color: #fff;
+    background-color: #242627;;
+    border: none;
+    border-radius: 0.625rem;
+    transition: all 0.3s ease;
+}
+.login-logo:hover {
+    background-color: #b7d8ee !important;
+    color: #242627;;
+    cursor: pointer;
+} 
+
+.label-login {
+    font-size: 16px;
+    font-weight: 500;
+}

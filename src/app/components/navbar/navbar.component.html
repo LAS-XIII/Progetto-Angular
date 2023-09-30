@@ -1,0 +1,74 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+  <div class="commands">
+    <div class="menu-logo">
+      <button
+        class="logo"
+        [ngClass]="collapsed ? 'close' : 'open'"
+        (click)="openSideBar()"
+      >
+        <mat-icon
+          class="menu-button"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="{{ collapsed ? 'close-icon' : 'menu-logo' }}"
+        ></mat-icon>
+      </button>
+      <div class="logo-text"></div>
+    </div>
+    <ul class="sidenav-nav">
+      <li class="sidenav-nav-item" *ngFor="let data of navData">
+        <a class="sidenav-nav-link" [routerLink]="[data.routerLink]">
+          <mat-icon
+            class="sidenav-nav-icon"
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="{{ data.icon }}"
+          ></mat-icon>
+          <span class="sidenav-link-text" *ngIf="collapsed">{{
+            data.label
+          }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="menu-logo login" *ngIf="notlog">
+    <button
+      class="sidenav-nav-item login-logo"
+      type="button"
+      (click)="loggin()"
+    >
+      <div class="sidenav-nav-link">
+        <mat-icon
+          class="sidenav-nav-icon"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="key icon"
+        ></mat-icon>
+        <span class="sidenav-link-text label-login" *ngIf="collapsed"
+          >Login</span
+        >
+      </div>
+    </button>
+  </div>
+  <div *ngIf="!notlog">
+    <div class="menu-logo login">
+      <button
+        class="sidenav-nav-item login-logo"
+        type="button"
+        (click)="loggingout()"
+      >
+        <div class="sidenav-nav-link">
+          <mat-icon
+            class="sidenav-nav-icon"
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="key icon"
+          ></mat-icon>
+          <span class="sidenav-link-text label-login" *ngIf="collapsed"
+            >Logout</span
+          >
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

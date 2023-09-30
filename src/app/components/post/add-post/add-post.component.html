@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="helper">
+    <button mat-button class="toogle" (click)="toogle()" *ngIf="pageIsLarge">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+  </div>
+  <mat-sidenav-container class="side">
+    <mat-sidenav
+      #sidenav
+      mode="side"
+      [(opened)]="opened"
+      position="end"
+      class="opener"
+    >
+      <div class="sidenav">
+        <div class="helper">
+          <button
+            mat-button
+            class="toogle"
+            (click)="toogle()"
+            *ngIf="pageIsLarge"
+          >
+            <mat-icon>keyboard_arrow_right</mat-icon>
+          </button>
+        </div>
+        <form class="form" #addForm="ngForm" (submit)="onSubmit()">
+          <h2>Add Post</h2>
+
+          <mat-form-field class="full-width">
+            <mat-label>Id User</mat-label>
+            <input
+              matInput
+              placeholder="id"
+              name="id"
+              [(ngModel)]="data.user_id"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Title</mat-label>
+            <input
+              matInput
+              placeholder="title"
+              name="title"
+              [(ngModel)]="data.title"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Text-body</mat-label>
+            <textarea
+              matInput
+              placeholder="text"
+              name="text"
+              [(ngModel)]="data.body"
+              required
+            ></textarea>
+          </mat-form-field>
+
+          <button class="btn-submit" type="submit">Add</button>
+        </form>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>

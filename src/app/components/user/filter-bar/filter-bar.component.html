@@ -1,0 +1,25 @@
+<form class="form" #searchForm="ngForm" (submit)="onSubmit()">
+  <div class="input-field">
+    <input
+      type="text"
+      class="search"
+      [(ngModel)]="search"
+      name="inputSearch"
+      id="inputSearch"
+    />
+    <label for="inputSearch" class="icon">
+      <mat-icon>search_icon</mat-icon>
+    </label>
+  </div>
+  <div class="number-field">
+    <input
+      class="number"
+      type="number"
+      [(ngModel)]="elements"
+      name="numberElement"
+      value="10"
+      min="0"
+    />
+  </div>
+  <button type="submit" class="btn-submit">Submit</button>
+</form>

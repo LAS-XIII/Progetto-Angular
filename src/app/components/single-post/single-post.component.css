@@ -1,0 +1,73 @@
+/* Base Component */
+
+.container {
+    width: 100%;
+}
+
+.post-card {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0.635rem;
+    background-color: white;
+    box-shadow: 0px 1px 5px 2px #888;
+}
+
+.headers {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 0.625rem 1.625rem 0.625rem ;
+    border-radius: 5px;
+}
+
+.body {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1.625rem 1.625rem 0.625rem ;
+}
+
+
+
+/* Header of post */
+
+.title {
+    font-size: larger;
+    font-weight: 500;
+    margin: 0.625rem 0;
+}
+
+.subtitle {
+    font-size: small;
+    color: #888;
+    margin: 0;
+}
+
+.comments {
+    background-color: #eee;
+}
+
+
+
+/* Error */
+
+.error-card {
+    padding: 1rem 3rem;
+    background-color: rgb(233, 114, 114);
+    color: white;
+    font-size: large;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.error-card>p {
+    margin: auto;
+}
+
+
+
+.expandable {
+    width: 100%;
+}

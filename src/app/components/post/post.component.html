@@ -1,0 +1,19 @@
+<div class="page">
+  <div class="hero">
+    <h2 class="title">Posts</h2>
+    <div class="search">
+      <app-filter-bar (sendData)="getSearchData($event)"></app-filter-bar>
+    </div>
+  </div>
+  <div class="body">
+    <div class="posts">
+      <app-single-post
+        [posts]="posts"
+        [thereAreAnyPosts]="true"
+      ></app-single-post>
+    </div>
+    <div class="add">
+      <app-add-post></app-add-post>
+    </div>
+  </div>
+</div>

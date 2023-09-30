@@ -1,0 +1,48 @@
+<mat-accordion class="expandable">
+  <mat-expansion-panel
+    class="comments"
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title class="comment-preview"> Comments </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form #commentsForm="ngForm" (submit)="onSubmit()" class="form">
+      <mat-form-field class="half-width">
+        <mat-label>User name</mat-label>
+        <input
+          matInput
+          placeholder="name"
+          name="name"
+          [(ngModel)]="data.name"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field class="half-width">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="title"
+          name="title"
+          type="email"
+          [(ngModel)]="data.email"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Text-body</mat-label>
+        <textarea
+          matInput
+          placeholder="text"
+          name="text"
+          [(ngModel)]="data.body"
+          required
+        ></textarea>
+      </mat-form-field>
+
+      <button class="btn-submit" type="submit">Add</button>
+    </form>
+  </mat-expansion-panel>
+</mat-accordion>

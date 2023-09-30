@@ -1,0 +1,28 @@
+<div class="page">
+  <div class="login-form">
+    <h2 class="form-title">Login</h2>
+    <form class="form" #formLogin="ngForm" (submit)="onSubmit()">
+      <mat-form-field class="input" appearance="outline">
+        <mat-label for="token">Token</mat-label>
+        <input
+          matInput
+          type="text"
+          name="token"
+          placeholder="inserisci il tuo token per loggare"
+          [(ngModel)]="token"
+        />
+      </mat-form-field>
+      <a
+        href="https://gorest.co.in/consumer/login"
+        class="dispatcher"
+        target="blank"
+        >If you haven't just a Token for login please click here, log with an
+        account and copy the Token on the field over here.</a
+      >
+      <button type="submit" class="btn-submit">Login</button>
+    </form>
+    <div *ngIf="error">
+      <p class="error-message">credenziali non valide, riprova</p>
+    </div>
+  </div>
+</div>

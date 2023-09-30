@@ -1,0 +1,21 @@
+<div class="page">
+  <div class="hero">
+    <h1 class="title">Users</h1>
+    <div class="search">
+      <app-filter-bar (sendData)="getSearchData($event)"></app-filter-bar>
+    </div>
+  </div>
+  <div class="body">
+    <div class="table">
+      <app-table-list
+        (refreshList)="getListUser()"
+        [list]="usersList"
+        class="app-table"
+      ></app-table-list>
+      <button class="add-btn" type="button" (click)="add()">+</button>
+    </div>
+    <div class="add-user">
+      <app-add-user [opened]="open"></app-add-user>
+    </div>
+  </div>
+</div>

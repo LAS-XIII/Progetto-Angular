@@ -1,0 +1,12 @@
+<div class="page">
+  <div class="hero">
+    <h1 class="title">{{ user?.name }}</h1>
+    <p class="subtitle">{{ user?.id }}</p>
+  </div>
+  <div class="body">
+    <app-single-post
+      [thereAreAnyPosts]="thereArePosts"
+      [posts]="posts"
+    ></app-single-post>
+  </div>
+</div>
