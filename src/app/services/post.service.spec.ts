@@ -54,7 +54,7 @@ describe('PostService', () => {
     service.insertPost(testPost, idPost).subscribe(data => {
       expect(data).toEqual(testPost);
     });
-    const req = httpMock.expectOne(`${service.endpoint}posts/${idPost}/comments`);
+    const req = httpMock.expectOne(`${service.endpoint}users/${idPost}/posts`);
     expect(req.request.method).toBe('POST');
     expect(req.request.headers.get('Authorization')).toContain('Bearer');
     req.flush(testPost); 

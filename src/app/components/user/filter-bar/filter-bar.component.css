@@ -7,7 +7,7 @@
 }
 
 .input-field {
-    width: 70%;
+    width: 65%;
     height: 100%;
     display: flex;
     background-color: white;
@@ -28,7 +28,7 @@
 }
 
 .number-field {
-    width: 15%;
+    width: 20%;
     height: 100%;
     border-left: 1px solid #bbb;
     border-bottom: 1px solid #bbb;

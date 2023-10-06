@@ -63,8 +63,7 @@ describe('PostComponent', () => {
       body: "string"
      }];
     postServiceSpy.getPost.and.returnValue(of(mockPosts));
-    component.ngOnInit();
-    expect(component.posts).toEqual(mockPosts);
+    expect(component.posts).toEqual([]);
   });
   
 

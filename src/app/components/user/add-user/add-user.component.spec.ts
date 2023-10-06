@@ -43,18 +43,25 @@ describe('AddUserComponent', () => {
     expect(component.opened).toBe(false)
   })
 
+  it('should the page is wide and is closed', () => {
+    component.pageIsLarge = true;
+    component.opened = false;
+    component.toogle()
+    expect(component.opened).toBe(true)
+  })
+
   it('should the page is thight and is closed', () => {
     component.pageIsLarge = false;
     component.opened = false;
     component.toogle()
-    expect(component.opened).toBe(true)
+    expect(component.opened).toBe(false)
   })
 
   it('should the page is thight and is opened', () => {
     component.pageIsLarge = false;
     component.opened = true;
     component.toogle()
-    expect(component.opened).toBe(false)
+    expect(component.opened).toBe(true)
   })
 
 

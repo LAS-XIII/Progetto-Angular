@@ -27,16 +27,16 @@ describe('BodyComponent', () => {
 
   it('the windows is thight', () => {
     component.collapsed = true;
-    component.screenWidth>768 == true;
-    const bodyClass = component.getBodyClass();
-    expect(bodyClass).toBe('body-trimmed');
+    component.screenWidth = 800;
+    let info = component.getBodyClass();
+    expect(info).toBe('body-trimmed');
   });
 
   it('the windows is wide', () => {
-    component.collapsed = false;
-    component.screenWidth<=768 == true;
-    const bodyClass = component.getBodyClass();
-    expect(bodyClass).toBe('body-md-screen');
+    component.collapsed = true;
+    component.screenWidth = 700;
+    let info = component.getBodyClass();
+    expect(info).toBe('body-md-screen');
   });
 
 });

@@ -7,16 +7,25 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormMaterialModule } from 'src/app/modules/material/form-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ActivatedRoute } from '@angular/router';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
   let httpTestingController: HttpTestingController;
+  const activatedRouteMock = {
+    snapshot: {
+      paramMap: new Map()
+    }
+  };
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, FormsModule, MatFormFieldModule, FormMaterialModule, BrowserAnimationsModule],
-      providers: [LoginService],
+      providers: [
+        LoginService,
+        { provide: ActivatedRoute, useValue: activatedRouteMock }
+      ],
       declarations: [LoginComponent]
     }).compileComponents()
     
@@ -49,7 +58,7 @@ describe('LoginComponent', () => {
 
   it('should is logged', () => {
     component.token = "token";
-    const login = component.onSubmit()
+    component.onSubmit()
     expect(component.login).toHaveBeenCalled
   })
 
