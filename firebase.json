@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "./dist/ntt-data",
+    "public": "dist/ntt-data",
     "ignore": [
       "firebase.json",
       "**/.*",

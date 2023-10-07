@@ -11,6 +11,8 @@
     width: 100%;
     height: 10vh;
     display: flex;
+    position: fixed;
+    z-index: 2;
     align-items: center;
     border: 1px solid #ddd;
     background: #b7d8ee;
@@ -21,6 +23,7 @@
     min-height: 100vh;
     background-color: #bbb;
     display: flex;
+    padding-top: 10vh;
 }
 
 

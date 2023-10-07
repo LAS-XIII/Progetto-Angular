@@ -16,11 +16,9 @@ export class LoginComponent {
   constructor(private loginService: LoginService, private router: Router, private route: ActivatedRoute) {}
   
   login() {
-    console.log(this.token)
     this.loginService.authenticate(this.token).subscribe(() => {
-        console.log("logging")
-        window.sessionStorage.setItem("token", this.token);
-        this.router.navigate(['../user'], { relativeTo: this.route });
+        window.sessionStorage.setItem("token", this.token); 
+        window.open(`${window.location.protocol}//${window.location.host}/user`)
       }, (error) => {
         this.error = error.status==401 ? true : false;
       }
