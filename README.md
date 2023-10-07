@@ -1,6 +1,13 @@
 # NTTData
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+The link for the website is: https://progetto-angular-ca951.web.app
+
+## How to install the project
+
+1. Copy the repository on your machine, open your terminal in the desired directory and send the command: 'git clone -b master https://github.com/LAS-XIII/Progetto-Angular.git'
+2. After that position your terminal in the project directory: 'cd ./Progetto-Angular'
+3. Install the dependencies: 'npm i angular'
 
 ## Development server
 
