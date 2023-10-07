@@ -12,6 +12,19 @@ The link for the website is: https://progetto-angular-ca951.web.app
 3. Install the dependencies:
    > npm i angular'
 
+## How the site work
+
+The website was designed to allow users to exploit the database made available by the https://gorest.co.in/.
+This Application has been divided into 3 main parts:
+
+- the landing part: with the welcome page and the login page;
+- the user part: where you have the view of the database users, with the ability to see the details of the users (including their posts), add users and delete them.
+- the post part: where you can see all the posts in the database, with the possibility to search for them, to add new ones, to display the comments for each and to add them.
+
+To log in, you must access the https://gorest.co.in/
+You have to login to the site and go to the personal profile, where you can copy a token to be inserted in the login page input.
+Once you have entered the token in the login just click the button to access the protected part.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
